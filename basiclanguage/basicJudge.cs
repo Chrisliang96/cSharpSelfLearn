@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using basicGrammertestnamespace;
+using cSharpSelfLearn.basiclanguage;
 
 
 class classExtre
@@ -39,7 +40,30 @@ class basicJudge{
          return result;
     }
 
-    static void Main(String[] args){
+    static void Main(String[] args)
+    {
+        CalcExpression();
+       // IntoData();
+    }
+
+    private static double Add(double arg1, double arg2)
+    {
+        return arg1 + arg2;
+    }
+
+    private static void CalcExpression()
+    {
+        
+        var cal = new Calc();
+        cal.Arg1 = 12;
+        cal.Arg2 = 34;
+        cal.Operator = Add;
+        var result= cal.Handler();
+        Console.WriteLine(result);
+    }
+
+    private static void IntoData()
+    {
         int result = Convert.ToInt32(13L);
         int target = Convert.ToInt32(22L);
         GetWeatherDisplay(result);
@@ -50,10 +74,13 @@ class basicJudge{
         testnamespace.Program.programInside();
         classExtre.testEnumOutside testEnumOutside = classExtre.testEnumOutside.north;
         Console.WriteLine(testEnumOutside);
-        var enumOutside = (byte)testEnumOutside;
+        var enumOutside = (byte) testEnumOutside;
         Console.WriteLine(enumOutside);
-        int east = (int)MyEnum.east;
+        int east = (int) MyEnum.east;
         Console.WriteLine(east);
-        
+
+        string addTotalToString = BasicDelegate.addTotalToString(result, target, BasicDelegate.totalToString);
+        Console.WriteLine(addTotalToString);
+        Console.WriteLine(addTotalToString.GetType());
     }
 }
