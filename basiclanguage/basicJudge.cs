@@ -12,9 +12,24 @@ class classExtre
     {
         return weather.ToString();
     }
+
+     public enum testEnumOutside : byte
+     {
+         north = 1,
+         south = 2,
+         
+     }
+     
+    
 }
 
 class basicJudge{
+
+    enum MyEnum : int
+    {
+        west = 1,
+        east = Int32.MaxValue, 
+    }
 
     static string GetWeatherDisplay(int tempInCelsius){
          StringBuilder stringBuilder = new StringBuilder();
@@ -33,5 +48,12 @@ class basicJudge{
         Console.WriteLine(weatherFromOutside);
         basicGrammertestnamespace.program.programInside();
         testnamespace.Program.programInside();
+        classExtre.testEnumOutside testEnumOutside = classExtre.testEnumOutside.north;
+        Console.WriteLine(testEnumOutside);
+        var enumOutside = (byte)testEnumOutside;
+        Console.WriteLine(enumOutside);
+        int east = (int)MyEnum.east;
+        Console.WriteLine(east);
+        
     }
 }
