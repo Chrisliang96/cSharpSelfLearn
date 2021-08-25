@@ -1,0 +1,15 @@
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/bin/Debug/net5.0/cSharpSelfLearn.deps.json
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/bin/Debug/net5.0/cSharpSelfLearn.runtimeconfig.json
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/bin/Debug/net5.0/cSharpSelfLearn.runtimeconfig.dev.json
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/bin/Debug/net5.0/cSharpSelfLearn.dll
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/bin/Debug/net5.0/ref/cSharpSelfLearn.dll
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/bin/Debug/net5.0/cSharpSelfLearn.pdb
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/obj/Debug/net5.0/cSharpSelfLearn.csproj.AssemblyReference.cache
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/obj/Debug/net5.0/cSharpSelfLearn.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/obj/Debug/net5.0/cSharpSelfLearn.AssemblyInfoInputs.cache
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/obj/Debug/net5.0/cSharpSelfLearn.AssemblyInfo.cs
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/obj/Debug/net5.0/cSharpSelfLearn.csproj.CoreCompileInputs.cache
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/obj/Debug/net5.0/cSharpSelfLearn.dll
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/obj/Debug/net5.0/ref/cSharpSelfLearn.dll
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/obj/Debug/net5.0/cSharpSelfLearn.pdb
+/Users/hanbing.liang/Documents/c#selflearn/cSharpSelfLearn/obj/Debug/net5.0/cSharpSelfLearn.genruntimeconfig.cache
