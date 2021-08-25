@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using basicGrammertestnamespace ;
+using basicGrammertestnamespace;
+
 
 class classExtre
 {
@@ -30,6 +31,7 @@ class basicJudge{
         classExtre ex = new classExtre();
         string weatherFromOutside = ex.GetWeatherFromOutside(target);
         Console.WriteLine(weatherFromOutside);
-       
+        basicGrammertestnamespace.program.programInside();
+        testnamespace.Program.programInside();
     }
 }
