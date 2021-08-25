@@ -40,18 +40,12 @@ class basicJudge{
          return result;
     }
 
-    static void Main(String[] args)
-    {
-        CalcExpression();
-       // IntoData();
-    }
-
     private static double Add(double arg1, double arg2)
     {
         return arg1 + arg2;
     }
 
-    private static void CalcExpression()
+    public static void CalcExpression()
     {
         
         var cal = new Calc();
@@ -62,7 +56,7 @@ class basicJudge{
         Console.WriteLine(result);
     }
 
-    private static void IntoData()
+    public static void IntoData()
     {
         int result = Convert.ToInt32(13L);
         int target = Convert.ToInt32(22L);
