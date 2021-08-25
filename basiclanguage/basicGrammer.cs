@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace basicGrammer{
+namespace basicGrammertestnamespace{
     class program{
             
-        static void Main(string[] args){
+        public static void programInside ( ){
             double firstNumber = 2L;
             double secondNumber = 3L;
             string userName = "lhb";
