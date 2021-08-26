@@ -8,9 +8,10 @@ namespace cSharpSelfLearn
     {
         static void Main(String[] args)
         {
-            basicJudge.IntoData();
-            program.programInside();
-            basicJudge.CalcExpression();
+            // basicJudge.IntoData();
+            // program.programInside();
+            // basicJudge.CalcExpression();
+            basicException.TryExceptionAndLoop();
         }
     }
 }
