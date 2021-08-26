@@ -11,7 +11,8 @@ namespace cSharpSelfLearn
             // basicJudge.IntoData();
             // program.programInside();
             // basicJudge.CalcExpression();
-            basicException.TryExceptionAndLoop();
+            //basicException.TryExceptionAndLoop();
+            ObjectOriented.OperateDemoClass.TestDemo();
         }
     }
 }
