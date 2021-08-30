@@ -15,8 +15,8 @@ namespace cSharpSelfLearn
             //basicException.TryExceptionAndLoop();
             //ObjectOriented.OperateDemoClass.TestDemo();
             //Console.WriteLine();
-            TestColonerAndOperator();
-
+//            TestColonerAndOperator();
+            new InjectedAndPoolTest.Program().TestInjectAndPool();
         }
 
         public static void TestColonerAndOperator()

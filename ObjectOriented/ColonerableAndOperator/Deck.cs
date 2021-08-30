@@ -50,7 +50,7 @@ namespace cSharpSelfLearn.ObjectOriented.Colonerable
                 return cards[cardNum];
             else
                 throw (new System.ArgumentOutOfRangeException("cardNum", cardNum,
-                    "Value must be between 0 and 51."));
+                    "Value must be between 0 and 30."));
         }
 
 
