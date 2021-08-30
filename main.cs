@@ -1,6 +1,7 @@
 ﻿using System;
 using basicGrammertestnamespace;
 using cSharpSelfLearn.basiclanguage;
+using cSharpSelfLearn.ObjectOriented.Colonerable;
 
 namespace cSharpSelfLearn
 {
@@ -12,7 +13,25 @@ namespace cSharpSelfLearn
             // program.programInside();
             // basicJudge.CalcExpression();
             //basicException.TryExceptionAndLoop();
-            ObjectOriented.OperateDemoClass.TestDemo();
+            //ObjectOriented.OperateDemoClass.TestDemo();
+            //Console.WriteLine();
+            TestColonerAndOperator();
+
+        }
+
+        public static void TestColonerAndOperator()
+        {
+            Deck myDeck = new Deck();
+            myDeck.Shuffle();
+            for (int i = 0; i < 30; i++)
+            {
+                Card tempCard = myDeck.GetCard(i);
+                Console.Write(tempCard.ToString() );
+                if (i != 29)
+                    Console.WriteLine(", ");
+                else
+                    Console.WriteLine();
+            }
         }
     }
 }

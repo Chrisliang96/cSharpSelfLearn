@@ -10,6 +10,7 @@
 	2.2：了解c#和数据库的操作。
 	参考资料：https://docs.microsoft.com/en-us/dotnet/csharp/
 			https://www.runoob.com/csharp/csharp-tutorial.html
+## 2(补充)、了解掌握c#lambada表达式及各关键词作用
 ## 3、根据今早zoom会议中的模型，了解c#中Entity Framework Core、ado.net、相关知识
 	参考资料：https://docs.microsoft.com/en-us/ef/
 ## 4、了解winform、wpf程序（两种技术栈）
