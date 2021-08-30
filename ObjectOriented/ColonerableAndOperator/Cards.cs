@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace cSharpSelfLearn.ObjectOriented.Colonerable
+namespace cSharpSelfLearn.ObjectOriented.ColonerableAndOperator
 {
     public class Cards : List<Card>, ICloneable
     {

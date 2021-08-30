@@ -1,6 +1,6 @@
 using System;
 
-namespace cSharpSelfLearn.ObjectOriented.Colonerable
+namespace cSharpSelfLearn.ObjectOriented.ColonerableAndOperator
 {
     public class Deck : ICloneable
     {

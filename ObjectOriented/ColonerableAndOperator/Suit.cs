@@ -1,4 +1,4 @@
-namespace cSharpSelfLearn.ObjectOriented.Colonerable
+namespace cSharpSelfLearn.ObjectOriented.ColonerableAndOperator
 {
     public enum Suit
     {

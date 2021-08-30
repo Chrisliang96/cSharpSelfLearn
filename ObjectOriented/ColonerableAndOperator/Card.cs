@@ -1,9 +1,8 @@
 using System;
-using System.Reflection.Metadata.Ecma335;
 
-namespace cSharpSelfLearn.ObjectOriented.Colonerable
+namespace cSharpSelfLearn.ObjectOriented.ColonerableAndOperator
 {
-    public class Card : ICloneable
+    public class Card : ICloneable 
     {
         private readonly Rank rank;
         private readonly Suit suit;

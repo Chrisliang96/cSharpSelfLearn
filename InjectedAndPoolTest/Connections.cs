@@ -1,11 +1,15 @@
 using System;
+using System.Collections.Generic;
 using System.Timers;
+
+//using System.Timers;
+
 
 
 namespace cSharpSelfLearn.InjectedAndPoolTest
 {
     public delegate void MessageHandler(string messageText);
-    public class Connections
+    public class Connections 
     {
         public event MessageHandler MessageArrived;
         private Timer pollTimer;
