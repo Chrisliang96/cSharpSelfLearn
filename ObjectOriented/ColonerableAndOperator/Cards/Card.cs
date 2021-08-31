@@ -5,7 +5,7 @@ namespace cSharpSelfLearn.ObjectOriented.ColonerableAndOperator
     public class Card : ICloneable 
     {
         private readonly Rank rank;
-        private readonly Suit suit;
+        public readonly Suit suit;
 
         public Card(Rank NewRank , Suit NewSuit)
         {

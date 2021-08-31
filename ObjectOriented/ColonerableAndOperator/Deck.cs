@@ -1,40 +1,47 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using cSharpSelfLearn.ObjectOriented.ColonerableAndOperator;
 
-namespace cSharpSelfLearn.ObjectOriented.ColonerableAndOperator
-{
+public delegate void LastCardDrawnHandler(Deck currentDeck);
     public class Deck : ICloneable
     {
-        
+        public event LastCardDrawnHandler LastCardDrawn;
         private Cards cards = new Cards();
-        
         public Deck()
         {
-            for (int suitVal = 0; suitVal < 4; suitVal++)
-            {
-                for (int rankVal = 1; rankVal < 9; rankVal++)
-                {
-                    cards.Add(new Card((Rank) suitVal, (Suit) rankVal));
-                }
-            }
+            InsertAllCards();
         }
-        
-        public Deck(Cards newCards)
+        protected Deck(Cards newCards)
         {
             cards = newCards;
         }
-
+        public int CardsInDeck
+        {
+            get { return cards.Count; }
+        }
+        public Card GetCard(int cardNum)
+        {
+            if (cardNum >= 0 && cardNum <= 51)
+            {
+                if ((cardNum == 51) && (LastCardDrawn != null)) LastCardDrawn(this);
+                return cards[cardNum];
+            }
+            else
+                throw new CardOutOfRangeException(cards.Clone() as Cards);
+        }
         public void Shuffle()
         {
             Cards newDeck = new Cards();
-            bool[] assigned = new bool[31];
+            bool[] assigned = new bool[cards.Count];
             Random sourceGen = new Random();
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < cards.Count; i++)
             {
                 int sourceCard = 0;
                 bool foundCard = false;
                 while (foundCard == false)
                 {
-                    sourceCard = sourceGen.Next(30);
+                    sourceCard = sourceGen.Next(cards.Count);
                     if (assigned[sourceCard] == false)
                         foundCard = true;
                 }
@@ -43,23 +50,50 @@ namespace cSharpSelfLearn.ObjectOriented.ColonerableAndOperator
             }
             newDeck.CopyTo(cards);
         }
-        
-        public Card GetCard(int cardNum)
+        public void ReshuffleDiscarded(List<Card> cardsInPlay)
         {
-            if (cardNum >= 0 )
-                return cards[cardNum];
-            else
-                throw (new System.ArgumentOutOfRangeException("cardNum", cardNum,
-                    "Value must be between 0 and 30."));
+            InsertAllCards(cardsInPlay);
+            Shuffle();
         }
-
-
+        public Card Draw()
+        {
+            if (cards.Count == 0) return null;
+            var card = cards[0];
+            cards.RemoveAt(0);
+            return card;
+        }
+        public Card SelectCardOfSpecificSuit(Suit suit)
+        {
+            Card selectedCard = cards.FirstOrDefault(card => card?.suit == suit);
+            if (selectedCard == null) return Draw();
+            cards.Remove(selectedCard);
+            return selectedCard;
+        }
         public object Clone()
         {
             Deck newDeck = new Deck(cards.Clone() as Cards);
             return newDeck;
         }
+        private void InsertAllCards()
+        {
+            for (int suitVal = 0; suitVal < 4; suitVal++)
+            {
+                for (int rankVal = 1; rankVal < 14; rankVal++)
+                {
+                    cards.Add(new Card((Suit)suitVal, (Rank)rankVal));
+                }
+            }
+        }
+        private void InsertAllCards(List<Card> except)
+        {
+            for (int suitVal = 0; suitVal < 4; suitVal++)
+            {
+                for (int rankVal = 1; rankVal < 14; rankVal++)
+                {
+                    var card = new Card((Rank)rankVal,(Suit)suitVal);
+                    if (except?.Contains(card) ?? false) continue;
+                    cards.Add(card);
+                }
+            }
+        }
     }
-
-   
-}
