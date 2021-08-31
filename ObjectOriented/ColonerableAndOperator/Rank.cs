@@ -11,5 +11,9 @@ namespace cSharpSelfLearn.ObjectOriented.ColonerableAndOperator
         Seven,
         Eight,
         Nine,
+        Ten,
+        Jack,
+        Queen,
+        King,
     }
 }
