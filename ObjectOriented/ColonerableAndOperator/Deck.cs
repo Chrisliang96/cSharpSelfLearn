@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using cSharpSelfLearn.ObjectOriented.ColonerableAndOperator;
+using cSharpSelfLearn.ObjectOriented.ColonerableAndOperator.Exception;
 
 public delegate void LastCardDrawnHandler(Deck currentDeck);
     public class Deck : ICloneable
@@ -28,7 +29,7 @@ public delegate void LastCardDrawnHandler(Deck currentDeck);
                 return cards[cardNum];
             }
             else
-                throw new CardOutOfRangeException(cards.Clone() as Cards);
+                throw new OutOfRangeException(cards.Clone() as Cards);
         }
         public void Shuffle()
         {
@@ -80,7 +81,7 @@ public delegate void LastCardDrawnHandler(Deck currentDeck);
             {
                 for (int rankVal = 1; rankVal < 14; rankVal++)
                 {
-                    cards.Add(new Card((Suit)suitVal, (Rank)rankVal));
+                    cards.Add(new Card((Rank)rankVal,(Suit)suitVal));
                 }
             }
         }
