@@ -2,9 +2,11 @@
 using basicGrammertestnamespace;
 using cSharpSelfLearn.basiclanguage;
 using cSharpSelfLearn.ObjectOriented.ColonerableAndOperator;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace cSharpSelfLearn
 {
+    
     static class Mainclass
     {
         static void Main(String[] args)
@@ -15,8 +17,9 @@ namespace cSharpSelfLearn
             //basicException.TryExceptionAndLoop();
             //ObjectOriented.OperateDemoClass.TestDemo();
             //Console.WriteLine();
-//            TestColonerAndOperator();
-            new InjectedAndPoolTest.Program().TestInjectAndPool();
+            //TestColonerAndOperator();
+            //new InjectedAndPoolTest.Program().TestInjectAndPool();
+            LinqMethod.LinqSearch.LinqSearchTest();
         }
 
         public static void TestColonerAndOperator()

@@ -21,6 +21,8 @@ namespace cSharpSelfLearn.basiclanguage
     {
         public double Arg1 { get; set; }
         public double Arg2 { get; set; }
+        
+        
         public Func<double,double,double> Operator { get; set; }
 
         public double Handler()
