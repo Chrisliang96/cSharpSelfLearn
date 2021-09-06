@@ -21,16 +21,16 @@ Sep.10th
 ## c#总体计划（基础及提升）
 ## C# 基础
 
-    1. 基本语法（命名空间，类型，字段，属性，事件，委托）
-    2. 值类型与引用类型（枚举，结构，类, 接口）
+    1. 基本语法（命名空间，类型，字段，属性，事件，委托）✓
+    2. 值类型与引用类型（枚举，结构，类, 接口）✓
     3. 拆箱与装箱/类型转换（隐式/显式,Convert）
-    4. 面向对象（接口，抽象类）
-    5. 异常体系(常用异常，自定义异常)
+    4. 面向对象（接口，抽象类）✓
+    5. 异常体系(常用异常，自定义异常)✓
     6. Ado.net(DBConnection,DBCommand,DBTransaction,DataTable,Dataset,DataAdapter)
-    7. 集合类型（Array,List,Dictionary,Set,HashMap, IEnumable,IQueryable)
+    7. 集合类型（Array,List,Dictionary,Set,HashMap, IEnumable,IQueryable)✓
     8. 匿名类型(类型初始化块)
     9. Winform / Wpf 初级入门
-    10. 泛型(泛型类，泛型接口，泛型方法，泛型约束)
+    10. 泛型(泛型类，泛型接口，泛型方法，泛型约束)✓
     11. 测试框架(xunit,moq,shoulder)
     12. 拓展方法
 

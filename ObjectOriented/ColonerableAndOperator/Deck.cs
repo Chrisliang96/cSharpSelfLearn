@@ -28,8 +28,8 @@ public delegate void LastCardDrawnHandler(Deck currentDeck);
                 if ((cardNum == 51) && (LastCardDrawn != null)) LastCardDrawn(this);
                 return cards[cardNum];
             }
-            else
-                throw new OutOfRangeException(cards.Clone() as Cards);
+            throw new OutOfRangeException(cards.Clone() as Cards);
+
         }
         public void Shuffle()
         {
