@@ -3,9 +3,9 @@ using cSharpSelfLearn.BoxingGame.Combat.Attact;
 
 namespace cSharpSelfLearn.BoxingGame.Combat.Fighter.Trap
 {
-    public class PunchTraps : Traps
+    public class RandomTraps : Traps
     {
-        public PunchTraps( Point point) : base(new Punch(), point)
+        public RandomTraps( Point point) : base(new RandomAttack(), point)
         {
         }
     }

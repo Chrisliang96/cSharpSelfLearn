@@ -3,9 +3,9 @@ using cSharpSelfLearn.BoxingGame.Combat.Attact;
 
 namespace cSharpSelfLearn.BoxingGame.Combat.Fighter.Trap
 {
-    public class PunchTraps : Traps
+    public class SlickTraps : Traps
     {
-        public PunchTraps( Point point) : base(new Punch(), point)
+        public SlickTraps( Point point) : base(new Slick(), point)
         {
         }
     }
