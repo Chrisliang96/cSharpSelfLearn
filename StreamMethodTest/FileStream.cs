@@ -6,8 +6,6 @@ namespace cSharpSelfLearn.Stream
 {
     public class FileStreamDemo
     {
-        
-
         static void ReadFileByUsingStream()
         {
             string line;

@@ -1,10 +1,11 @@
 using System.Drawing;
+using cSharpSelfLearn.BoxingGame.Combat.Attact;
 
 namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
 {
     public interface IDefender
     {
-        void Defended(IAttacker attacker);
+        void Defended(IAttack attack);
 
         float GetHitPoint();
 
