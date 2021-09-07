@@ -21,20 +21,6 @@ namespace cSharpSelfLearn
             //new InjectedAndPoolTest.Program().TestInjectAndPool();
             LinqMethod.LinqSearch.LinqSearchTest();
         }
-
-        public static void TestColonerAndOperator()
-        {
-            Deck myDeck = new Deck();
-            myDeck.Shuffle();
-            for (int i = 0; i < 30; i++)
-            {
-                Card tempCard = myDeck.GetCard(i);
-                Console.Write(tempCard.ToString() );
-                if (i != 29)
-                    Console.WriteLine(", ");
-                else
-                    Console.WriteLine();
-            }
-        }
+        
     }
 }

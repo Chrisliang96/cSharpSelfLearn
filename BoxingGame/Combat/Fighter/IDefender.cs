@@ -1,3 +1,4 @@
+using System;
 using System.Drawing;
 using cSharpSelfLearn.BoxingGame.Combat.Attact;
 
@@ -8,7 +9,7 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
         void Defended(IAttack attack);
 
         float GetHitPoint();
-
+        
         Point GetPositon();
 
     }
