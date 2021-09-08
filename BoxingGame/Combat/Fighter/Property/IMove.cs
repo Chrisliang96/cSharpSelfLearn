@@ -1,6 +1,6 @@
 using System.Drawing;
 
-namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
+namespace cSharpSelfLearn.BoxingGame.Combat.Fighter.Property
 {
     public interface IMove
     {

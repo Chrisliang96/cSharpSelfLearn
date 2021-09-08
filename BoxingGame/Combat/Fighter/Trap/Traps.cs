@@ -1,5 +1,6 @@
 using System.Drawing;
 using cSharpSelfLearn.BoxingGame.Combat.Attact;
+using cSharpSelfLearn.BoxingGame.Combat.Fighter.Property;
 using cSharpSelfLearn.BoxingGame.Combat.Tools;
 
 namespace cSharpSelfLearn.BoxingGame.Combat.Fighter.Trap
@@ -17,7 +18,7 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter.Trap
 
         public void Attack(IDefender defender)
         {
-            if (Distance.GetDistance(defender.GetPositon(), _point) < _attack.GetRange())
+            if (Distance.GetDistance(defender.GetPosition(), _point) < _attack.GetRange())
             {
                 defender.Defended(_attack);
             }

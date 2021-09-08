@@ -1,4 +1,5 @@
 using System.Drawing;
+using cSharpSelfLearn.BoxingGame.Combat.Fighter.Property;
 
 namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
 {

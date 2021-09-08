@@ -1,8 +1,7 @@
-using System;
 using System.Drawing;
 using cSharpSelfLearn.BoxingGame.Combat.Attact;
 
-namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
+namespace cSharpSelfLearn.BoxingGame.Combat.Fighter.Property
 {
     public interface IDefender
     {
@@ -10,7 +9,7 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
 
         float GetHitPoint();
         
-        Point GetPositon();
+        Point GetPosition();
 
     }
 }
