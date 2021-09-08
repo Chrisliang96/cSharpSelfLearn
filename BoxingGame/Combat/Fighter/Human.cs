@@ -21,11 +21,10 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
             _weapon = weapon;
             _position = position;
         }
-
-
+        
         public void Move(Point position)
         {
-            throw new System.NotImplementedException();
+            _position = position;
         }
 
         public void Defended(IAttack attack)

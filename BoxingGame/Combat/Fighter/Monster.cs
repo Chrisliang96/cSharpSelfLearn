@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using cSharpSelfLearn.BoxingGame.Combat.Attact;
 using cSharpSelfLearn.BoxingGame.Combat.Fighter.Property;
+using cSharpSelfLearn.BoxingGame.Combat.Tools;
 
 namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
 {
@@ -16,37 +17,43 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
         {
             if (attacks.Length == 0)
             {
-                
+                throw new System.Exception("monster must attack");
             }
 
             HP = hp;
             _attacks = attacks;
             _position = position;
+            _random = new Random();
         }
 
         public void Move(Point position)
         {
-            throw new System.NotImplementedException();
+            _position = position;
         }
 
         public void Defended(IAttack attack)
         {
-            throw new System.NotImplementedException();
+            HP -= attack.GetDamage();
         }
 
         public float GetHitPoint()
         {
-            throw new System.NotImplementedException();
+            return HP;
         }
 
         public Point GetPosition()
         {
-            throw new System.NotImplementedException();
+            return _position;
         }
 
         public void Attack(IDefender defender)
         {
-            throw new System.NotImplementedException();
+            var attackDamage = _attacks[_random.Next(0,_attacks.Length)];
+            var distance = Distance.GetDistance(_position,defender.GetPosition());
+            if (attackDamage.GetRange() > distance)
+            {
+                defender.Defended(attackDamage);
+            }
         }
         
     }
