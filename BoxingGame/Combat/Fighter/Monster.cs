@@ -29,12 +29,14 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
 
         public void Move(Point position)
         {
-            _position = position;
+            _position = new Point(position.X - 1, position.Y - 1);
+            Console.WriteLine("Monster position has change ");
         }
 
         public void Defended(IAttack attack)
         {
             HP -= attack.GetDamage();
+            if (HP < 0) HP = 0;
         }
 
         public float GetHitPoint()
@@ -42,6 +44,7 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
             return HP;
         }
 
+        
         public Point GetPosition()
         {
             return _position;
@@ -54,6 +57,9 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
             if (attackDamage.GetRange() > distance)
             {
                 defender.Defended(attackDamage);
+            }else
+            {
+                Move(_position);
             }
         }
         

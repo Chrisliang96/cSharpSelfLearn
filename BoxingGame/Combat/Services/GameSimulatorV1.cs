@@ -11,16 +11,15 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Services
 {
     public class GameSimulatorV1
     {
-        private const int RangeX = 20;
-        private const int RangeY = 20;
+        private const int RangeX = 40;
+        private const int RangeY = 40;
 
         public static void Run()
         {
-            var combatants = CreateCombatants();
-            var fighter = combatants[0];
-            var monster = combatants[1];
+            var fighter = new Human(100, new ArmorEfficent(), new Sword(), new Point(RangeX,RangeY));
+            var monster = new Monster(300, new IAttack[] { new Punch(),new RandomAttack() }, new Point(0,0));
             var round = 0;
-            while (fighter.GetHitPoint() > 0 && monster.GetHitPoint() > 0)
+            while (fighter.GetHitPoint() > 0 && monster.GetHitPoint() > 0 )
             {
                 AnnounceRound(round);
                 Fight(fighter,monster);
@@ -55,14 +54,7 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Services
             Console.WriteLine(winner);
             Console.ResetColor();
         }
-
-        private static ICombatant[] CreateCombatants()
-        {
-            var challenger = new Human(100, new ArmorEfficent(), new Sword(), Point.Empty);
-            var monster= new Monster(100, new IAttack[] { new Punch(),new RandomAttack() }, Point.Empty);
-
-            return new ICombatant[] { challenger,monster };
-        }
+        
         
         private static void AnnounceRound(int round)
         {
@@ -72,13 +64,13 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Services
             Console.WriteLine();
         }
         
-        private static void Fight(ICombatant fighter, ICombatant monster)
+        private static void Fight(Human fighter, Monster monster)
         {
             fighter.Attack(monster);
             monster.Attack(fighter);
         }
         
-        private static void ReportRound(ICombatant fighter, ICombatant monster)
+        private static void ReportRound(Human fighter, Monster monster)
         {
             if (fighter.GetHitPoint() > monster.GetHitPoint())
             {
@@ -99,7 +91,7 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Services
             Console.WriteLine();
         }
 
-        private static void AnnounceDraw(ICombatant fighter, ICombatant monster)
+        private static void AnnounceDraw(Human fighter, Monster monster)
         {
             Console.Write($"Fighter: {fighter.GetHitPoint()} hp, ");
             Console.Write($"Monster: {monster.GetHitPoint()} hp.");

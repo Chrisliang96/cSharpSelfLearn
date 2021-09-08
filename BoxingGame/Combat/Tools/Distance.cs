@@ -1,3 +1,4 @@
+using System;
 using System.Drawing;
 
 namespace cSharpSelfLearn.BoxingGame.Combat.Tools
@@ -6,7 +7,7 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Tools
     {
         public static float GetDistance(Point p1, Point p2)
         {
-            return (p1.X - p2.X) * (p1.X - p2.X) + (p1.Y - p2.Y) * (p1.Y - p2.Y);
+            return (float) Math.Sqrt((p1.X - p2.X) * (p1.X - p2.X) + (p1.Y - p2.Y) * (p1.Y - p2.Y)) ;
         }
     }
 }

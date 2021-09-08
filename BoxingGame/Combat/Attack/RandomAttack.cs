@@ -7,12 +7,12 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Attact
         private Random _random = new Random();
         public float GetDamage()
         {
-            return (float) _random.NextDouble() * 100;
+            return (float) Math.Ceiling(_random.NextDouble() * 50) ;
         }
 
         public float GetRange()
         {
-            return (float) _random.NextDouble() * 10;
+            return (float) Math.Ceiling(_random.NextDouble() * 10) ;
         }
     }
 }

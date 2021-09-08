@@ -1,4 +1,6 @@
+using System;
 using System.Drawing;
+using System.Security.Principal;
 using cSharpSelfLearn.BoxingGame.Combat.Armor;
 using cSharpSelfLearn.BoxingGame.Combat.Attact;
 using cSharpSelfLearn.BoxingGame.Combat.Fighter.Property;
@@ -24,20 +26,27 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
         
         public void Move(Point position)
         {
-            _position = position;
+            
+            var positionX = (Int32)(position.X - 3*new Random().NextDouble());
+            var positionY = (Int32)(position.Y - 3*new Random().NextDouble());
+            Console.WriteLine($"Fighter position has change to [{positionX},{positionY}]");
+            _position = new Point(positionX, positionY);
         }
 
         public void Defended(IAttack attack)
         {
             var defenceDamage = 1 - _armor.GetArmor();
             HP -= attack.GetDamage() * defenceDamage;
+            Console.WriteLine("Armor defend some of attack successfully");
+            if (HP < 0) HP = 0;
+            
         }
 
         public float GetHitPoint()
         {
             return HP;
         }
-
+        
         public Point GetPosition()
         {
             return _position;
@@ -49,7 +58,12 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
             var distance = Distance.GetDistance(defender.GetPosition(),_position);
             if (weaponAttack.GetRange() > distance)
             {
+                Console.WriteLine("Fighter hit Monster");
                 defender.Defended(weaponAttack);
+            }
+            else
+            {
+                Move(_position);
             }
         }
 

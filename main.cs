@@ -21,8 +21,8 @@ namespace cSharpSelfLearn
             //TestColonerAndOperator();
             //new InjectedAndPoolTest.Program().TestInjectAndPool();
             //LinqMethod.LinqSearch.LinqSearchTest();
-            Console.Title = "--MAN VS MONSTER--";
-            Console.Title = "--Chrisliang's RPG--";
+            Console.WriteLine("--MAN VS MONSTER--"); 
+            Console.WriteLine("--Chrisliang's RPG--"); 
             GameSimulatorV1.Run();
         }
         

@@ -10,7 +10,7 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Attack
         }
         public float GetRange()
         {
-            return 6f;
+            return 10f;
             
         }
     }
