@@ -1,12 +1,13 @@
 using System;
 using System.Drawing;
 using cSharpSelfLearn.BoxingGame.Combat.Attact;
+using cSharpSelfLearn.BoxingGame.Combat.Exception;
 using cSharpSelfLearn.BoxingGame.Combat.Fighter.Property;
 using cSharpSelfLearn.BoxingGame.Combat.Tools;
 
 namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
 {
-    public class Monster : IPray , IHunter
+    public class Monster : ICombatant
     {
         private readonly Random _random;
         private float HP;
@@ -17,7 +18,7 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
         {
             if (attacks.Length == 0)
             {
-                throw new System.Exception("monster must attack");
+                throw new NoneOfAttackException("monster must attack");
             }
 
             HP = hp;

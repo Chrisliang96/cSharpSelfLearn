@@ -7,7 +7,7 @@ using cSharpSelfLearn.BoxingGame.Combat.Weapon;
 
 namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
 {
-    public class Human : IPray , IHunter
+    public class Human : ICombatant
     {
         private float HP;
         private IArmor _armor;
