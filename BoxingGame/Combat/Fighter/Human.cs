@@ -27,8 +27,8 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
         public void Move(Point position)
         {
             
-            var positionX = (Int32)(position.X - 3*new Random().NextDouble());
-            var positionY = (Int32)(position.Y - 3*new Random().NextDouble());
+            var positionX = (Int32)(position.X - new Random().Next(3));
+            var positionY = (Int32)(position.Y - new Random().Next(3));
             Console.WriteLine($"Fighter position has change to [{positionX},{positionY}]");
             _position = new Point(positionX, positionY);
         }

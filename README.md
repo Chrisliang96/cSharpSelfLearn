@@ -26,9 +26,9 @@ Sep.10th
     3. 拆箱与装箱/类型转换（隐式/显式,Convert）
     4. 面向对象（接口，抽象类）✓
     5. 异常体系(常用异常，自定义异常)✓
-    6. Ado.net(DBConnection,DBCommand,DBTransaction,DataTable,Dataset,DataAdapter)
+    6. Ado.net(DBConnection,DBCommand,DBTransaction,DataTable,Dataset,DataAdapter) 0 
     7. 集合类型（Array,List,Dictionary,Set,HashMap, IEnumable,IQueryable)✓
-    8. 匿名类型(类型初始化块)
+    8. 匿名类型(类型初始化块) 0
     9. Winform / Wpf 初级入门
     10. 泛型(泛型类，泛型接口，泛型方法，泛型约束)✓
     11. 测试框架(xunit,moq,shoulder)
@@ -39,8 +39,8 @@ Sep.10th
     1. 反射（Attribute,Assembly,Type,MethodInfo,FieldInfo,PropertyInfo）
     2. 多线程/异步任务(Thread, Task, await/async)
     3. 正则表达式(常用正则，正则替换，命名捕获)
-    4. Entityframework Core(理解DBContext，Transaction，DBSet)
-    5. Linq 与 lambda(常用lambda函数)
+    4. Entityframework Core(理解DBContext，Transaction，DBSet) 0
+    5. Linq 与 lambda(常用lambda函数) 0
     6. WebApi（初级入门）
     7. 动态类型(dynamic)
     8. AutoMapper

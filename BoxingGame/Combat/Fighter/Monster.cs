@@ -33,8 +33,8 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
             if (_position.X > 0)
             {
                 _position = new Point(position.X - 1, position.Y - 1);
+                Console.WriteLine("Monster position has change ");
             }
-            Console.WriteLine("Monster position has change ");
         }
 
         public void Defended(IAttack attack)
@@ -60,6 +60,7 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
             var distance = Distance.GetDistance(_position,defender.GetPosition());
             if (attackDamage.GetRange() > distance)
             {
+                Console.WriteLine("Monster hit Fighter");
                 defender.Defended(attackDamage);
             }else
             {
