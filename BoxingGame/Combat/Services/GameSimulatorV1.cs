@@ -17,7 +17,7 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Services
         public static void Run()
         {
             var fighter = new Human(100, new ArmorEfficent(), new Sword(), new Point(RangeX,RangeY));
-            var monster = new Monster(300, new IAttack[] { new Punch(),new RandomAttack() }, new Point(0,0));
+            var monster = new Monster(300, new IAttack[] { new Punch(),new RandomAttack() }, new Point(10,10));
             var round = 0;
             while (fighter.GetHitPoint() > 0 && monster.GetHitPoint() > 0 )
             {

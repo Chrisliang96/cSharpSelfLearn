@@ -29,7 +29,11 @@ namespace cSharpSelfLearn.BoxingGame.Combat.Fighter
 
         public void Move(Point position)
         {
-            _position = new Point(position.X - 1, position.Y - 1);
+            
+            if (_position.X > 0)
+            {
+                _position = new Point(position.X - 1, position.Y - 1);
+            }
             Console.WriteLine("Monster position has change ");
         }
 
