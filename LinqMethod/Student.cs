@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace cSharpSelfLearn.LinqMethod
@@ -93,5 +94,7 @@ namespace cSharpSelfLearn.LinqMethod
                 ExamScores = new List<int> {94, 92, 91, 91}
             }
         };
+        
+        String test = "test commit --amend";
     }
 }
